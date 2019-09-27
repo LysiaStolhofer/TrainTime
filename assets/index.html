@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+
+    <!-- link to google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC|Great+Vibes|Mansalva|Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- link to bootstrap -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+
+    <!-- link to css style sheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+    <!-- link to jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Title for webpage -->
+    <title>Train Schedule</title>
+
+  </head>
+  <body>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <h1>Winter Express</h1>
+      <p id="hoho">HO HO HO! All aboard!</p>
+      <p id="time"></p>
+    </div>
+
+    <div class="panel panel-primary">
+      <!-- Firebase panel Content-->
+      <div class="panel-heading" id="TS">Train Schedule</div>
+
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Train Name</th>
+            <th>Destination</th>
+            <th>Frequency</th>
+            <th>Next Arrival</th>
+            <th>Minutes Away</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="table-info">
+          <!-- Below Insert data the user inputs into firebase -->
+          <!--<tr>-->
+          <!--<td>  </td>-->
+          <!--<td>  </td>-->
+          <!--<td>  </td>-->
+          <!--<td>  </td>-->
+          <!--<td>  </td>-->
+          <!--</tr>-->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- New Train panel contents -->
+    <div class="panel panel-primary">
+      <div class="panel-heading" id="TS">Add A Train</div>
+      <div class="panel-body">
+
+        <!-- Train Name user input -->
+        <div class="form-group">
+          <label for="trainNameInput"> Train Name </label>
+          <input
+            type="text"
+            class="form-control"
+            id="trainNameInput"
+            placeholder="Enter Train Name Here"
+          />
+        </div>
+
+        <!-- Train Destination user input -->
+        <div class="form-group">
+          <label for="destinationInput">Destination</label>
+          <input
+            type="text"
+            class="form-control"
+            id="destinationInput"
+            placeholder="Where To"
+          />
+        </div>
+
+        <!-- First Train Time user input -->
+        <div class="form-group">
+          <label for="firstTrainTimeInput">
+            First Train Time (HH:mm - Military Time)</label
+          >
+          <br />
+          <input
+            type="time"
+            class="form-control"
+            id="firstTrainTimeInput"
+            placeholder="00:00"
+          />
+        </div>
+
+        <!-- Train Frequency -->
+        <div class="form-group">
+          <label for="frequencyInput">Frequency</label>
+          <input
+            type="number"
+            class="form-control"
+            id="frequencyInput"
+            placeholder="Enter Value Of Minutes (Not 0)"
+          />
+        </div>
+
+        <!-- Submit Button -->
+        <div id="align">
+          <button type="submit" class="btn btn-primary" id="submitButton">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- links -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <script src="assets/javascript/app.js"></script>
+
+  </body>
+</html>
