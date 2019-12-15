@@ -7,7 +7,8 @@ _A web page created to manage the arrival and destinations of trains._
 - delete button to delete rows with train informations individually 
 - current time is continually passing 
 - calculates until the next train is arriving 
-  ---------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------
 ## Features :computer:
  
 - HTML
